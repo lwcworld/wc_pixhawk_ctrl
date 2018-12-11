@@ -1,5 +1,4 @@
 # installation
-===========
 - Pixhawk/NuttX toolchain for hardware firmware build
 ```
 https://dev.px4.io/en/setup/dev_env_linux.html
@@ -10,19 +9,18 @@ https://dev.px4.io/en/setup/dev_env_linux.html
 ```
 - This package
 ```
-git clone https://github.com/lwcworld/ETRI_FDI.git
+https://github.com/lwcworld/wc_pixhawk_ctrl.git
 ```
-- PX4 Firmware
+- PX4 Firmware upload to Pixhawk board (pixhawk4 board)
 ``` 
-cd <PATH to install PX4>
-git clone --branch v1.8.1 https://github.com/PX4/Firmware.git
-cd Firmware 
-git submodule update --init --recursive
-make posix_sitl_default gazebo
+cd <PATH to Firmware>
+make px4_fmu-v5_default 
+make px4_fmu-v4_default upload
 ```
-- make soft link for "sitl_gazebo" directory to the catkin_ws/src 
+- PX4 SITL
+make soft link for "sitl_gazebo" directory to the catkin_ws/src 
 ``` 
-ln -s <Path to PX4>/Tools/sitl_gazebo/ /home/<user>/catkin_ws/src/
+ln -s <Path to Firmware>/Tools/sitl_gazebo/ /home/<user>/catkin_ws/src/
 cd catkin_ws
 catkin build
 ```
