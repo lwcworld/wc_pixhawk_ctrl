@@ -1,6 +1,10 @@
 # installation
 ===========
-- Gazebo & ROS environment
+- Pixhawk/NuttX toolchain for hardware firmware build
+```
+https://dev.px4.io/en/setup/dev_env_linux.html
+```
+- Gazebo & ROS environment for SITL
 ```
 https://dev.px4.io/en/setup/dev_env_linux.html
 ```
@@ -8,12 +12,6 @@ https://dev.px4.io/en/setup/dev_env_linux.html
 ```
 git clone https://github.com/lwcworld/ETRI_FDI.git
 ```
-- ROS and Gazebo env
-```
-cd <Path to this package>/install
-./ubuntu_sim_ros_gazebo.sh
-```
-
 - PX4 Firmware
 ``` 
 cd <PATH to install PX4>
