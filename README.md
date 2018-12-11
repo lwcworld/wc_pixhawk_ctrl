@@ -32,21 +32,21 @@ catkin build
 
 # run SITL
 1. source dependent packages
-'''
+```
 cd <PATH to Firmware>
-'''
-'''
+```
+```
 source ~/catkin_ws/devel/setup.bash
-'''
-'''
+```
+```
 source Tools/setup_gazebo.bash $(pwd) $(pwd)/build_posix_sitl_default
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
-'''
+```
 
 2. launch SITL
-'''
+```
 roslaunch px4 mavros_posix_sitl.launch 
-'''
+```
 
 3. run code
